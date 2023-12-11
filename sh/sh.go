@@ -40,20 +40,33 @@ func (r *Runner) apply(opts ...Option) {
 	for _, opt := range opts {
 		opt.ApplyToRunner(r)
 	}
-	r.logger = slog.Default()
+	if r.logger == nil {
+		r.logger = slog.Default()
+	}
+	if r.stdout == nil {
+		r.stdout = os.Stdout
+	}
+	if r.stderr == nil {
+		r.stderr = os.Stderr
+	}
 }
 
 func (r *Runner) Run(cmd string, args ...string) error {
-	return r.run(r.stdout, r.stderr, cmd, args...)
+	return r.run(r.stdout, r.stderr, nil, cmd, args...)
+}
+
+func (r *Runner) Bash(script []string) error {
+	scriptBuf := bytes.NewBuffer([]byte(strings.Join(script, "\n")))
+	return r.run(r.stdout, r.stderr, scriptBuf, "bash")
 }
 
 func (r *Runner) Output(cmd string, args ...string) (string, error) {
 	var out bytes.Buffer
-	err := r.run(&out, nil, cmd, args...)
+	err := r.run(&out, r.stderr, nil, cmd, args...)
 	return strings.TrimRight(out.String(), "\n"), err
 }
 
-func (r *Runner) run(stdout, stderr io.Writer, cmd string, args ...string) error {
+func (r *Runner) run(stdout, stderr io.Writer, stdin io.Reader, cmd string, args ...string) error {
 	c := exec.Command(cmd, args...)
 	c.Env = os.Environ()
 	for k, v := range r.env {
@@ -65,6 +78,7 @@ func (r *Runner) run(stdout, stderr io.Writer, cmd string, args ...string) error
 		stderr = &stderrBuf
 	}
 
+	c.Stdin = stdin
 	c.Stdout = stdout
 	c.Stderr = stderr
 	c.Dir = r.workDir

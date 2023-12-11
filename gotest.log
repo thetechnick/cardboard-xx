@@ -1,0 +1,38 @@
+{"Time":"2023-12-11T12:09:52.635600226+01:00","Action":"start","Package":"pkg.package-operator.run/cardboard"}
+{"Time":"2023-12-11T12:09:52.635653482+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard","Output":"?   \tpkg.package-operator.run/cardboard\t[no test files]\n"}
+{"Time":"2023-12-11T12:09:52.635658302+01:00","Action":"skip","Package":"pkg.package-operator.run/cardboard","Elapsed":0}
+{"Time":"2023-12-11T12:09:52.833280771+01:00","Action":"start","Package":"pkg.package-operator.run/cardboard/run"}
+{"Time":"2023-12-11T12:09:52.833395044+01:00","Action":"start","Package":"pkg.package-operator.run/cardboard/sh"}
+{"Time":"2023-12-11T12:09:52.840092298+01:00","Action":"run","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Run"}
+{"Time":"2023-12-11T12:09:52.840116896+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Run","Output":"=== RUN   TestRunner_Run\n"}
+{"Time":"2023-12-11T12:09:52.840271192+01:00","Action":"run","Package":"pkg.package-operator.run/cardboard/run","Test":"TestManager"}
+{"Time":"2023-12-11T12:09:52.840274498+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/run","Test":"TestManager","Output":"=== RUN   TestManager\n"}
+{"Time":"2023-12-11T12:09:52.840358973+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Run","Output":"    logger.go:225: time=2023-12-11T12:09:52.840+01:00 level=INFO msg=exec cmd=echo args=\"\"\n"}
+{"Time":"2023-12-11T12:09:52.840505979+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/run","Test":"TestManager","Output":"--- PASS: TestManager (0.00s)\n"}
+{"Time":"2023-12-11T12:09:52.840518819+01:00","Action":"pass","Package":"pkg.package-operator.run/cardboard/run","Test":"TestManager","Elapsed":0}
+{"Time":"2023-12-11T12:09:52.840533038+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/run","Output":"PASS\n"}
+{"Time":"2023-12-11T12:09:52.840790852+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Run","Output":"\n"}
+{"Time":"2023-12-11T12:09:52.84090283+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Run","Output":"--- PASS: TestRunner_Run (0.00s)\n"}
+{"Time":"2023-12-11T12:09:52.840917904+01:00","Action":"pass","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Run","Elapsed":0}
+{"Time":"2023-12-11T12:09:52.840927689+01:00","Action":"run","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Run_error"}
+{"Time":"2023-12-11T12:09:52.840929569+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Run_error","Output":"=== RUN   TestRunner_Run_error\n"}
+{"Time":"2023-12-11T12:09:52.841027859+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Run_error","Output":"    logger.go:225: time=2023-12-11T12:09:52.840+01:00 level=INFO msg=exec cmd=bash args=\"-c, false\"\n"}
+{"Time":"2023-12-11T12:09:52.841383982+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/run","Output":"coverage: 55.3% of statements\n"}
+{"Time":"2023-12-11T12:09:52.84182001+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Run_error","Output":"--- PASS: TestRunner_Run_error (0.00s)\n"}
+{"Time":"2023-12-11T12:09:52.841830371+01:00","Action":"pass","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Run_error","Elapsed":0}
+{"Time":"2023-12-11T12:09:52.841840379+01:00","Action":"run","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Run_runerror"}
+{"Time":"2023-12-11T12:09:52.841841893+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Run_runerror","Output":"=== RUN   TestRunner_Run_runerror\n"}
+{"Time":"2023-12-11T12:09:52.841977204+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Run_runerror","Output":"    logger.go:225: time=2023-12-11T12:09:52.841+01:00 level=INFO msg=exec cmd=xxxxxxxxxxx args=\"\"\n"}
+{"Time":"2023-12-11T12:09:52.842005051+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Run_runerror","Output":"--- PASS: TestRunner_Run_runerror (0.00s)\n"}
+{"Time":"2023-12-11T12:09:52.842016471+01:00","Action":"pass","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Run_runerror","Elapsed":0}
+{"Time":"2023-12-11T12:09:52.842025266+01:00","Action":"run","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Output"}
+{"Time":"2023-12-11T12:09:52.8420269+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Output","Output":"=== RUN   TestRunner_Output\n"}
+{"Time":"2023-12-11T12:09:52.842109591+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Output","Output":"    logger.go:225: time=2023-12-11T12:09:52.842+01:00 level=INFO msg=exec cmd=echo args=\"hello world\"\n"}
+{"Time":"2023-12-11T12:09:52.842484929+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Output","Output":"--- PASS: TestRunner_Output (0.00s)\n"}
+{"Time":"2023-12-11T12:09:52.842491967+01:00","Action":"pass","Package":"pkg.package-operator.run/cardboard/sh","Test":"TestRunner_Output","Elapsed":0}
+{"Time":"2023-12-11T12:09:52.84250453+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/sh","Output":"PASS\n"}
+{"Time":"2023-12-11T12:09:52.843290508+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/sh","Output":"coverage: 71.7% of statements\n"}
+{"Time":"2023-12-11T12:09:53.842939246+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/run","Output":"ok  \tpkg.package-operator.run/cardboard/run\t1.009s\tcoverage: 55.3% of statements\n"}
+{"Time":"2023-12-11T12:09:53.842959131+01:00","Action":"pass","Package":"pkg.package-operator.run/cardboard/run","Elapsed":1.01}
+{"Time":"2023-12-11T12:09:53.844775347+01:00","Action":"output","Package":"pkg.package-operator.run/cardboard/sh","Output":"ok  \tpkg.package-operator.run/cardboard/sh\t1.011s\tcoverage: 71.7% of statements\n"}
+{"Time":"2023-12-11T12:09:53.844783041+01:00","Action":"pass","Package":"pkg.package-operator.run/cardboard/sh","Elapsed":1.011}
